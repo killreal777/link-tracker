@@ -17,8 +17,10 @@
 
     <modules>
         <module>bot</module>
+        <module>bot-api</module>
         <module>report</module>
         <module>scrapper</module>
+        <module>scrapper-api</module>
     </modules>
 
     <properties>
@@ -68,6 +70,17 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>backend.academy</groupId>
+                <artifactId>bot-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>backend.academy</groupId>
+                <artifactId>scrapper-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.jspecify</groupId>
                 <artifactId>jspecify</artifactId>
