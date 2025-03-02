@@ -21,4 +21,5 @@ dependency-reduced-pom.xml
 
 ### log files ###
 *.log
+*log.json
 hs_err_pid*
