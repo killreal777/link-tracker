@@ -4,12 +4,12 @@
 
 ### Запуск
 
-1. Обеспечить передачу токенов в конфигурацию приложений: 
-[bot](bot/src/main/resources/application.yaml),
-[scrapper](scrapper/src/main/resources/application.yaml)
+1. Обеспечить передачу токенов в конфигурацию приложений:
+   [bot](bot/src/main/resources/application.yaml),
+   [scrapper](scrapper/src/main/resources/application.yaml)
 2. Запустить приложения:
-[bot](bot/src/main/java/backend/academy/bot/BotApplication.java),
-[scrapper](scrapper/src/main/java/backend/academy/scrapper/ScrapperApplication.java)
+   [bot](bot/src/main/java/backend/academy/bot/BotApplication.java),
+   [scrapper](scrapper/src/main/java/backend/academy/scrapper/ScrapperApplication.java)
 
 Проект сделан в рамках курса Академия Бэкенда.
 
