@@ -52,7 +52,11 @@ public class ListCommandHandler implements CommandHandler {
                 bot.execute(new SendMessage(chatId, String.format("Ошибка: %s", "Response body is null")));
                 return;
             }
-            bot.execute(new SendMessage(chatId, FormatUtils.formatListLinksResponse(response)));
+            if (response.links().isEmpty()) {
+                bot.execute(new SendMessage(chatId, "Нет отслеживаемых ссылок"));
+            } else {
+                bot.execute(new SendMessage(chatId, FormatUtils.formatListLinksResponse(response)));
+            }
         } catch (ScrapperRestClientApiErrorResponseException e) {
             bot.execute(new SendMessage(
                     chatId, String.format("Ошибка: %s", e.response().description())));
