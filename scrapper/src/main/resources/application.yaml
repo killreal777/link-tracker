@@ -1,8 +1,21 @@
 app:
-  github-token: ${GITHUB_TOKEN} # env variable
+  bot-api-base: http://localhost:8080
+  github:
+    api-base: https://api.github.com
+    token: ${GITHUB_TOKEN} # env variable
   stackoverflow:
+    api-base: https://api.stackexchange.com/2.3
     key: ${SO_TOKEN_KEY}
-    access-token: ${SO_ACCESS_TOKEN}
+  scheduling:
+    cron: "0 * * * * ?"
+    offset-minutes: 1
+
+logging:
+  structured:
+    format:
+      file: ecs
+  file:
+    name: scrapper-log.json
 
 spring:
   application:
